@@ -5,7 +5,8 @@ the [Interesting Tools Google
 Sheet](https://docs.google.com/spreadsheets/d/1VGVFXtfOAhZqPdY30mrD_4towCj6lCdhuwr35vp4xgM/edit)
 which shows one custom menu:
 
-1. **Newsletter:** Get the HTML code to copy into the MailChimp template.
+1. **Newsletter:** Get the HTML code to copy into the MailChimp template. Uses
+  [lib-mailchimphtml](https://github.com/consoledotdev/lib-mailchimphtml).
 
 ## Local development
 

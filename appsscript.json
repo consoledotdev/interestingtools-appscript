@@ -1,6 +1,11 @@
 {
   "timeZone": "Europe/London",
   "dependencies": {
+    "libraries": [{
+      "userSymbol": "LibMailchimpHTML",
+      "libraryId": "1UNp-1nYZjDs8BUqkYBzHSVpPg0oKkZ87H8-_yIAbGwA26rLG9nAH21GT",
+      "version": "2"
+    }]
   },
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8"
