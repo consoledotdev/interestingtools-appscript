@@ -14,7 +14,7 @@
                if (data[row][11]) {
                    text += " by " + data[row][11]
                }
-               text += ": " + data[row][8] + " We like: " + data[row][9];
+               text += " - " + data[row][8] + " We like: " + data[row][9];
             ?>
             <li><a href="https://twitter.com/intent/tweet?text=<?= text; ?>"
                    target="_blank">Tweet <?= row; ?> - <?= data[row][1]; ?></a></li>
