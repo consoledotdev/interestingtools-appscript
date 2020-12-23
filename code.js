@@ -25,7 +25,7 @@ function onOpen() {
 function getMCCode() {
   // Create HTML from template
   var html = HtmlService
-    .createTemplateFromFile('mc-template')
+    .createTemplateFromFile('mailchimp.html')
     .evaluate()
     .setHeight(180);
 
