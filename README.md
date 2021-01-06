@@ -10,6 +10,12 @@ which shows custom menus:
     [lib-mailchimphtml](https://github.com/consoledotdev/lib-mailchimphtml).
     2. Create draft Tweets.
 
+## Open development
+
+This repository is public, but is not currently open source. We have opened the
+repo to give a view into how we run [Console](https://console.dev) rather than
+for it to be independent, release-quality code.
+
 ## Local development
 
 This script is [bound](https://developers.google.com/apps-script/guides/bound)
@@ -27,4 +33,4 @@ within the sheet but using `clasp` is preferred.
 
 ## Debugging
 
-Check the live [Apps Script dashboard](https://script.google.com/home/all)
+Check the live [Apps Script dashboard](https://script.google.com/home/all).
