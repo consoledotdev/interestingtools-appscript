@@ -12,14 +12,14 @@
     See existing Scheduled Tweets</a>.</p>
     <ul>
         <? for (var row in data) { ?>
-            <? var text = "Interesting tool of the week: " + data[row][4];
-               if (data[row][11]) {
-                   text += " by " + data[row][11]
+            <? var text = "Interesting tool of the week: " + data[row]['URL'];
+               if (data[row]['Twitter']) {
+                   text += " by " + data[row]['Twitter']
                }
-               text += " - " + data[row][8] + " We like: " + data[row][9];
+               text += " - " + data[row]['What is it?'] + " We like: " + data[row]['What we like'];
             ?>
             <li><a href="https://twitter.com/intent/tweet?text=<?= text; ?>"
-                   target="_blank">Tweet <?= row; ?> - <?= data[row][1]; ?></a></li>
+                   target="_blank">Tweet <?= row; ?> - <?= data[row]['Tool/Product/Project']; ?></a></li>
         <? } ?>
     </ul>
     <? } else { ?>
