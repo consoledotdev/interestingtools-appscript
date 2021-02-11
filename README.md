@@ -7,7 +7,7 @@ which shows custom menus:
 
 1. **Newsletter:**
     1. Get the HTML code to copy into the MailChimp template. Uses
-    [lib-mailchimphtml](https://github.com/consoledotdev/lib-mailchimphtml).
+       [lib-mailchimphtml](https://github.com/consoledotdev/lib-mailchimphtml).
     2. Create draft Tweets.
 
 ## Open development

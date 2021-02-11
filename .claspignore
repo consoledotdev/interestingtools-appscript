@@ -124,3 +124,4 @@ dmypy.json
 
 .DS_Store
 .git/**
+node_modules/**

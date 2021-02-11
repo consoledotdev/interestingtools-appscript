@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base target="_top">
-  </head>
-  <body>
-    <? var data = LibMailchimpHTML.getData('All Tools!A1:L31'); ?>
-    <? if (Array.isArray(data) && data.length) { ?>
-    <p>Click the links below to create a draft tweet. Remember to schedule it
-    for the next few days. <a
-    href="https://twitter.com/compose/tweet/unsent/scheduled" target="_blank">
-    See existing Scheduled Tweets</a>.</p>
-    <ul>
-        <? for (var row in data) { ?>
+    <head>
+        <base target="_top" />
+    </head>
+    <body>
+        <? var data = LibMailchimpHTML.getData('All Tools!A1:L31'); ?>
+        <? if (Array.isArray(data) && data.length) { ?>
+        <p>
+            Click the links below to create a draft tweet. Remember to schedule
+            it for the next few days.
+            <a
+                href="https://twitter.com/compose/tweet/unsent/scheduled"
+                target="_blank"
+            >
+                See existing Scheduled Tweets</a
+            >.
+        </p>
+        <ul>
+            <? for (var row in data) { ?>
             <? var text = "Interesting tool of the week: " + data[row]['URL'];
                if (data[row]['Twitter']) {
                    text += " by " + data[row]['Twitter'].trim();
                }
                text += " - " + data[row]['What is it?'].trim() + " We like: " + data[row]['What we like'].trim();
             ?>
-            <li><a href="https://twitter.com/intent/tweet?text=<?= text; ?>"
-                   target="_blank">Tweet <?= row; ?> - <?= data[row]['Tool/Product/Project'].trim(); ?></a></li>
-        <? } ?>
-    </ul>
-    <? } else { ?>
+            <li>
+                <a
+                    href="https://twitter.com/intent/tweet?text=<?= text; ?>"
+                    target="_blank"
+                    >Tweet
+                    <?= row; ?>
+                    -
+                    <?= data[row]['Tool/Product/Project'].trim(); ?></a
+                >
+            </li>
+            <? } ?>
+        </ul>
+        <? } else { ?>
         <p>No items scheduled.</p>
-    <? } ?>
-  </body>
+        <? } ?>
+    </body>
 </html>
