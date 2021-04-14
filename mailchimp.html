@@ -6,10 +6,15 @@
     <body>
         <? var data = LibMailchimpHTML.getData('All Tools!A1:L50'); ?>
         <? if (Array.isArray(data) && data.length) { ?>
-        <p>
-            Copy the code below into the code section of a text block in the
-            MailChimp editor:
-        </p>
+        <h3>Contents</h3>
+<textarea id="code" name="code" rows="5" cols="50">
+<h4>Contents</h4>
+<? for (var row in data) { ?>
+<p>🔨 <a href="<?= data[row]['URL']; ?>" style="color: #5269ff"><?= data[row]['Tool/Product/Project'].trim(); ?></a> - <?= data[row]['What is it?'].trim(); ?></p>
+<? } ?>
+</textarea>
+
+        <h3>Content</h3>
         <textarea id="code" name="code" rows="5" cols="50">
 <? for (var row in data) { ?>
 <h2><a href="<?= data[row]['URL']; ?>"><?= data[row]['Tool/Product/Project'].trim(); ?></a></h2>
@@ -18,7 +23,7 @@
 <p><strong>What we don&apos;t like:</strong> <?= data[row]['What we dislike'].trim(); ?></p>
 <hr style="border: none; border-top: 2px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
 <? } ?>
-    </textarea>
+</textarea>
         <? } else { ?>
         <p>No items scheduled.</p>
         <? } ?>
