@@ -4,7 +4,7 @@
         <base target="_top" />
     </head>
     <body>
-        <? var data = LibMailchimpHTML.getData('All Tools!A:N'); ?>
+        <? var data = LibMailchimpHTML.getData('All Tools!A:P'); ?>
         <? if (Array.isArray(data) && data.length) { ?>
         <p>
             Click the links below to create a draft tweet. Remember to schedule
@@ -22,7 +22,10 @@
                if (data[row]['Twitter']) {
                    text += " by " + data[row]['Twitter'].trim();
                }
-               text += " - " + data[row]['What is it?'].trim() + " We like: " + data[row]['What we like'].trim();
+               text += "\n\nWe like: " + data[row]['What we like'].trim();
+               if (data[row]['Sponsored']) {
+                   text += "\n\n✦ Sponsored";
+                }
             ?>
             <li>
                 <a
