@@ -22,6 +22,7 @@
 <h4><?= data[row]['What is it?'].trim(); ?></h4>
 <p><strong>What we like:</strong> <?= data[row]['What we like'].trim(); ?></p>
 <p><strong>What we don&apos;t like:</strong> <?= data[row]['What we dislike'].trim(); ?></p>
+<? if (data[row]['Interview']) { ?><p><strong>Interview:</strong> EXCITING WORDS. <a href="https://console.dev<?= data[row]['Interview']; ?>">Read the interview</a>.</p><? } ?>
 <? if (data[row]['Sponsored']) { ?><p><strong>✦ <em style="font-size:14px; font-style:italic">Sponsored:</em></strong> <em style="font-size:14px; font-style:italic">All reviews are editorially independent, and partners must meet our <a href="https://console.dev/selection-criteria/">selection criteria</a>.</em></p><? } ?>
 
 <hr style="border: none; border-top: none; padding-top: 6px;" />
