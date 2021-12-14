@@ -10,8 +10,13 @@
     <? if (Array.isArray(data) && data.length) { ?>
     <h3>Contents</h3>
     <textarea id="code" name="code" rows="5" cols="50">
+        <table style="line-height: 150%; border-collapse:separate; border-spacing: 0 6px">
+            <tbody>
 <? for (var row in data) { ?>
-<span style="display:inline-block; font-size:15px; width:0.5em">+</span>&nbsp;&nbsp;<a href="<?= data[row]['URL']; ?>"><strong><?= data[row]['Tool/Product/Project'].trim(); ?></strong></a>&nbsp; &ndash;&nbsp;&nbsp;<?= data[row]['What is it?'].trim(); ?><br />
+    <tr>
+        <td style="vertical-align: top; width: 12px;"><strong style="display:block; font-size:12px; font-weight:bold; margin-right:4px; margin-top:1px; width:12px">＋</strong></td>
+        <td><a href="<?= data[row]['URL']; ?>"><strong><?= data[row]['Tool/Product/Project'].trim(); ?></strong></a> &ndash; <?= data[row]['What is it?'].trim(); ?></td>
+    </tr>
 <? } ?>
 </textarea>
 
